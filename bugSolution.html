@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // Correctly updating the content without losing the div element's attributes.
+    const myDiv = document.getElementById("myDiv");
+    myDiv.innerHTML = "<span>This text updates the content, preserving the original div's ID.</span>";
+
+    // Accessing the original div by its ID now works correctly.
+    myDiv.style.color = "blue";
+  </script>
+</body>
+</html>
