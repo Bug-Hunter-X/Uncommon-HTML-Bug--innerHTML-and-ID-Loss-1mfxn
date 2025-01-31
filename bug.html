@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // Incorrectly using innerHTML to insert a new div.
+    document.getElementById("myDiv").innerHTML = "<div>This text replaces the content, but the original div's ID is lost.</div>";
+
+    //Attempting to access the original div by its ID will fail.
+    document.getElementById("myDiv").style.color = "blue"; //This will not work.
+  </script>
+</body>
+</html>
